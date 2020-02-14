@@ -1,6 +1,7 @@
 # Photo-slideshow
 #### Problem statement for the Online Qualication Round of Hash Code 2019
 
+### collaborators chen zhao wong
 
 ## Introduction
 
