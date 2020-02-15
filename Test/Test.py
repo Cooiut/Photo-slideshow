@@ -33,31 +33,31 @@ def score(outfile):
     #         if i in photo_scores
     #             photo_scores[x] = {i: [len(y.difference(j)), len(y.intersection(j)), len(j.difference(i))]}
     fout = open(outfile, 'r')
-    out_list = fout.readlines()
+    out_list = fout.readlines()[1:]
     result = 0
 
     for x in range(len(out_list)):
         out_list[x] = out_list[x].rstrip()
-    print(out_list)
+    # print(out_list)
     for x in range(len(out_list) - 1):
         left, right = photo_tags[int(out_list[x])], photo_tags[int(out_list[x + 1])]
         intersection = len(photo_tags[int(out_list[x])].intersection(photo_tags[int(out_list[x + 1])]))
         minimum = min(abs(len(left) - intersection), intersection, abs(len(right) - intersection))
         result += minimum
-        print(result)
+        # print(result)
 
     return result
 
 
-original = "a_example.txt"
-original = ".txt"
-original = ".txt"
-original = ".txt"
-original = ".txt"
+if __name__ == '__main__':
+    # original = "a_example.txt"
+    original = "b_lovely_landscapes.txt"
+    # original = "c_memorable_moments.txt"
+    # original = "d_pet_pictures.txt"
+    # original = "e_shiny_selfies.txt"
 
-
-photo_sec = open_file("c_memorable_moments.txt")
-file_operation(photo_sec)
-# print(photo_sec)
-print(photo_tags)
-print(score("F:\\OneDrive - personalmicrosoftsoftware.uci.edu\\Code\\python\\Photo-sideshow\\Test\\output"))
+    photo_sec = open_file(original)
+    file_operation(photo_sec)
+    # print(photo_sec)
+    print(len(photo_tags))
+    print("Your Score is " + str(score("output")))
