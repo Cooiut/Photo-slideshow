@@ -2,7 +2,7 @@
 #  This problem is from Online Qualication Round of Hash Code 2019
 #  Contributor: Cooiut, Jason, Jiahao Chen
 
-import photoSlideshow
+# import photoSlideshow
 
 photo_tags = {}
 photo_scores = {}
@@ -51,13 +51,13 @@ def score(outfile):
 
 if __name__ == '__main__':
     # original = "a_example.txt"
-    original = "b_lovely_landscapes.txt"
-    # original = "c_memorable_moments.txt"
+    # original = "b_lovely_landscapes.txt"
+    original = "c_memorable_moments.txt"
     # original = "d_pet_pictures.txt"
     # original = "e_shiny_selfies.txt"
 
     photo_sec = open_file(original)
     file_operation(photo_sec)
-    # print(photo_sec)
-    print(len(photo_tags))
-    print("Your Score is " + str(score("output")))
+    print(len(photo_sec))
+    # print(len(photo_tags))
+    print("Your Score is " + str(score("Final_output.txt")))

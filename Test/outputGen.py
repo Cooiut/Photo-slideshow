@@ -6,9 +6,9 @@ if __name__ == '__main__':
 
     import random
 
-    x = 90000
+    x = 80000
 
-    f = open('output', 'w')
+    f = open('output.txt', 'w')
     ls = [str(i) for i in range(x)]
     random.shuffle(ls)
     f.write(str(x))
